@@ -48,7 +48,7 @@ echo "\n";
 
 echo "\n Polymorphism \n";
 
-$donors = [$donor1, $donor2, $donor3];
+$donors = [$donor1, $donor2, $donor3, $donor4];
 
 foreach ($donors as $donor) {
     $donor->donateBlood();
