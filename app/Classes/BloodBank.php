@@ -17,7 +17,7 @@ class BloodBank implements BloodBankInterface
 
     public function receivedBlood(BloodDonor $donor)
     {
-        $this->donors = $donor;
+        $this->donors[] = $donor;
 
         echo "Blood Received From " . $donor->getName() . "\n";
 
@@ -28,7 +28,7 @@ class BloodBank implements BloodBankInterface
         $matchingDonors = [];
 
         foreach ($this->donors as $donor) {
-            if ($donor->getBloodGroup == $bloodGroup) {
+            if ($donor->getBloodGroup() == $bloodGroup) {
                 $matchingDonors[] = $donor;
             }
 
@@ -43,9 +43,14 @@ class BloodBank implements BloodBankInterface
     public function displayDonors()
     {
         echo "List Of Donors : \n";
+        echo "As Per Donor Class  : \n";
 
         foreach ($this->donors as $donor) {
             $donor->displayDonorInfo();
+
+
+            echo "This Info Taken From Blood Bank :  \n";
+
             $this->testBloodGroup($donor);
 
             echo "\n";
