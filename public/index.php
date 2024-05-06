@@ -11,6 +11,7 @@ include 'autoloader.php';
 $donor1 = new VolunteerDonor("Alice", 25, "A+");
 $donor2 = new VolunteerDonor("Bob", 30, "B-");
 $donor3 = new ProfessionalDonor("Charlie", 35, "O+");
+$donor4 = new ProfessionalDonor("Aurin", 35, "A+");
 
 
 $bloodBank = new BloodBank();
@@ -23,6 +24,7 @@ $bloodBank = new BloodBank();
 $bloodBank->receivedBlood($donor1);
 $bloodBank->receivedBlood($donor2);
 $bloodBank->receivedBlood($donor3);
+$bloodBank->receivedBlood($donor4);
 
 
 // display donors information and perform blood test 
